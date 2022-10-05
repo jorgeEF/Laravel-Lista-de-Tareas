@@ -14,9 +14,8 @@ use App\Http\Controllers\CategoriesController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [TodosController::class, 'index']);
 
 Route::get('/tareas', [TodosController::class, 'index'])->name('todos');
 
